@@ -17,11 +17,11 @@ import Cookies from 'js-cookie';
 import styles from './BaseChat.module.scss';
 
 const EXAMPLE_PROMPTS = [
-  { text: 'Build a todo app in React using Tailwind' },
-  { text: 'Build a simple blog using Astro' },
-  { text: 'Create a cookie consent form using Material UI' },
-  { text: 'Make a space invaders game' },
-  { text: 'How do I center a div?' },
+  { text: 'Crie uma lista de tarefas interativa com React e Tailwind' },
+  { text: 'Construa um blog simples e moderno com Astro' },
+  { text: 'Implemente um formulário de consentimento de cookies elegante com Material UI' },
+  { text: 'Desenvolva um jogo clássico de Space Invaders' },
+  { text: 'Como posso centralizar um elemento div de forma eficiente?' },
 ];
 
 const providerList = [...new Set(MODEL_LIST.map((model) => model.provider))]
@@ -163,10 +163,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
             {!chatStarted && (
               <div id="intro" className="mt-[26vh] max-w-chat mx-auto text-center">
                 <h1 className="text-6xl font-bold text-bolt-elements-textPrimary mb-4 animate-fade-in">
-                  Where ideas begin
+                  Limite suas ideias ao infinito
                 </h1>
                 <p className="text-xl mb-8 text-bolt-elements-textSecondary animate-fade-in animation-delay-200">
-                  Bring ideas to life in seconds or get help on existing projects.
+                  Transforme suas ideias em realidade em segundos ou obtenha ajuda em projetos existentes.
                 </p>
               </div>
             )}
@@ -232,8 +232,8 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       minHeight: TEXTAREA_MIN_HEIGHT,
                       maxHeight: TEXTAREA_MAX_HEIGHT,
                     }}
-                    placeholder="How can Bolt help you today?"
-                    translate="no"
+                    placeholder="O que você quer criar hoje?"
+                    translate="yes"
                   />
                   <ClientOnly>
                     {() => (
